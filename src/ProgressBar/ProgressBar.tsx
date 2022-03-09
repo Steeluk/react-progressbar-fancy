@@ -23,15 +23,15 @@ const ProgressBar: React.FC<IProgressBarProps> = (props) => {
           glow && 'glowingEffect'
         }`}
         style={{
-          width: progressAnimation ? `${score > 3 ? score : 3}%` : 3,
+          width: progressAnimation ? `${score}%` : 0,
           background: `linear-gradient( to right, ${primaryColor}, ${secondaryColor})`,
-        }}
+        }} 
       />
       <div
         className={`${!(primaryColor || secondaryColor) && progressColor}`}
       >
         <div className={`particlesContainer`} style={{
-          left: progressAnimation ? `${score > 3 ? score : 3}%` : 3,
+          left: progressAnimation ?`${score > 1 ? score : 1}%` : 1,
         }}>
           <div className={`particles`} />
           <div className={`smallParticles smallParticles4`} style={{background: secondaryColor}} />

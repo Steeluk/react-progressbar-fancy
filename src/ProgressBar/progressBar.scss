@@ -3,7 +3,7 @@ $anim-duration: 3; // in seconds
 $anim-speed: 5; // in seconds
 
 .green {
-  --primary-color: #0575e6;
+  --primary-color: #f12711;
   --secondary-color: #00f260;
 }
 
@@ -89,7 +89,6 @@ $anim-speed: 5; // in seconds
   }
 
   .progressFill {
-    transition: all 1s ease-in-out;
     position: absolute;
     overflow: hidden;
     height: 15px;
@@ -98,6 +97,7 @@ $anim-speed: 5; // in seconds
     background: linear-gradient(
       to right,
       var(--primary-color),
+      #F0CB35,
       var(--secondary-color)
     );
     z-index: 10;
@@ -126,7 +126,6 @@ $anim-speed: 5; // in seconds
   }
 
   .particlesContainer {
-    transition: all 1s ease-in-out;
     position: absolute;
     bottom: 50%;
 
@@ -136,7 +135,6 @@ $anim-speed: 5; // in seconds
       border-radius: 50%;
       background: var(--secondary-color);
       animation: animation3 4s ease-in-out infinite;
-      animation-delay: 0.5s !important;
       opacity: 0;
     }
 
@@ -146,7 +144,6 @@ $anim-speed: 5; // in seconds
       border-radius: 50%;
       background: var(--secondary-color);
       animation: animation1 2.5s ease-in-out infinite;
-      animation-delay: 0.5s !important;
       opacity: 0;
 
       &.particles2 {
@@ -160,7 +157,6 @@ $anim-speed: 5; // in seconds
       border-radius: 50%;
       background: var(--secondary-color);
       animation: animation2 3s ease-in-out infinite;
-      animation-delay: 0.5s !important;
       opacity: 0;
 
       &.smallParticles2 {
@@ -209,7 +205,7 @@ $anim-speed: 5; // in seconds
   }
 
   .transitionDelay {
-    transition-delay: 1s;
+    transition-delay: 0s;
   }
 }
 

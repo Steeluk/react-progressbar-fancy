@@ -7,7 +7,15 @@
   "module": "build/index.es.js",
   "license": "MIT",
   "repository": "juniourrau/react-progressbar-fancy",
-  "keywords": ["react","progressbar", "typescript", "react-progressbar", "react-component", "gradient", "animation"],
+  "keywords": [
+    "react",
+    "progressbar",
+    "typescript",
+    "react-progressbar",
+    "react-component",
+    "gradient",
+    "animation"
+  ],
   "files": [
     "build"
   ],
