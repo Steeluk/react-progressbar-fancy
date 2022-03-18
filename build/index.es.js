@@ -1,4 +1,5 @@
-import { useState, useEffect, createElement, Fragment } from 'react';
+import * as React from 'react';
+import { useEffect } from 'react';
 
 function styleInject(css, ref) {
   if ( ref === void 0 ) ref = {};
@@ -31,42 +32,42 @@ var css_248z = ".green {\n  --primary-color: #f12711;\n  --secondary-color: #00f
 styleInject(css_248z);
 
 var ProgressBar = function (props) {
-    var _a = useState(false), progressAnimation = _a[0], setProgressAnimation = _a[1];
+    var _a = React.useState(false), progressAnimation = _a[0], setProgressAnimation = _a[1];
     var score = props.score, progressWidth = props.progressWidth, className = props.className, primaryColor = props.primaryColor, secondaryColor = props.secondaryColor, _b = props.progressColor, progressColor = _b === void 0 ? primaryColor || secondaryColor ? '' : 'red' : _b, label = props.label, hideText = props.hideText, darkTheme = props.darkTheme, disableGlow = props.disableGlow;
     useEffect(function () {
         setProgressAnimation(true);
     });
-    var renderProgressFiller = function (glow) { return (createElement(Fragment, null,
-        createElement("div", { className: "progressFill " + (!(primaryColor || secondaryColor) && progressColor) + " " + (glow && 'glowingEffect'), style: {
-                width: progressAnimation ? score + "%" : 0,
-                background: "linear-gradient( to right, " + primaryColor + ", " + secondaryColor + ")",
+    var renderProgressFiller = function (glow) { return (React.createElement(React.Fragment, null,
+        React.createElement("div", { className: "progressFill ".concat(!(primaryColor || secondaryColor) && progressColor, " ").concat(glow && 'glowingEffect'), style: {
+                width: progressAnimation ? "".concat(score, "%") : 0,
+                background: "linear-gradient( to right, ".concat(primaryColor, ", ").concat(secondaryColor, ")"),
             } }),
-        createElement("div", { className: "" + (!(primaryColor || secondaryColor) && progressColor) },
-            createElement("div", { className: "particlesContainer", style: {
-                    left: progressAnimation ? (score > 1 ? score : 1) + "%" : 1,
+        React.createElement("div", { className: "".concat(!(primaryColor || secondaryColor) && progressColor) },
+            React.createElement("div", { className: "particlesContainer", style: {
+                    left: progressAnimation ? "".concat(score > 1 ? score : 1, "%") : 1,
                 } },
-                createElement("div", { className: "particles" }),
-                createElement("div", { className: "smallParticles smallParticles4", style: { background: secondaryColor } }),
-                createElement("div", { className: "smallParticles smallParticles3", style: { background: secondaryColor } }),
-                createElement("div", { className: "smallParticles smallParticles2", style: { background: secondaryColor } }),
-                createElement("div", { className: "bigParticles", style: { background: secondaryColor } }),
-                createElement("div", { className: "smallParticles", style: { background: secondaryColor } }),
-                createElement("div", { className: "particles particles2", style: { background: secondaryColor } }),
-                createElement("div", { className: "smallParticles smallParticles5", style: { background: secondaryColor } }),
-                createElement("div", { className: "smallParticles smallParticles6", style: { background: secondaryColor } }))))); };
-    return (createElement("div", { className: "progressBarFancyContainer " + className, style: { width: progressWidth } },
-        !hideText && createElement("div", { className: "labelScoreContainer " + (darkTheme && "labelDarkTheme") },
-            createElement("div", { className: "label" }, label),
-            createElement("div", { className: "number" },
+                React.createElement("div", { className: "particles" }),
+                React.createElement("div", { className: "smallParticles smallParticles4", style: { background: secondaryColor } }),
+                React.createElement("div", { className: "smallParticles smallParticles3", style: { background: secondaryColor } }),
+                React.createElement("div", { className: "smallParticles smallParticles2", style: { background: secondaryColor } }),
+                React.createElement("div", { className: "bigParticles", style: { background: secondaryColor } }),
+                React.createElement("div", { className: "smallParticles", style: { background: secondaryColor } }),
+                React.createElement("div", { className: "particles particles2", style: { background: secondaryColor } }),
+                React.createElement("div", { className: "smallParticles smallParticles5", style: { background: secondaryColor } }),
+                React.createElement("div", { className: "smallParticles smallParticles6", style: { background: secondaryColor } }))))); };
+    return (React.createElement("div", { className: "progressBarFancyContainer ".concat(className), style: { width: progressWidth } },
+        !hideText && React.createElement("div", { className: "labelScoreContainer ".concat(darkTheme && "labelDarkTheme") },
+            React.createElement("div", { className: "label" }, label),
+            React.createElement("div", { className: "number" },
                 score,
                 "%")),
-        createElement("div", { className: "barGaugeContainer", style: { flexWrap: "wrap" } },
-            createElement("div", { className: "progressbarWidth", style: {
+        React.createElement("div", { className: "barGaugeContainer", style: { flexWrap: "wrap" } },
+            React.createElement("div", { className: "progressbarWidth", style: {
                     width: progressWidth,
                     margin: "0px 10px",
                 } },
-                createElement("div", { className: "progressBar" },
-                    createElement("div", { className: "progressTrack" }),
+                React.createElement("div", { className: "progressBar" },
+                    React.createElement("div", { className: "progressTrack" }),
                     renderProgressFiller(false),
                     !disableGlow && renderProgressFiller(true))))));
 };
