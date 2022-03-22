@@ -31,7 +31,7 @@ const ProgressBar: React.FC<IProgressBarProps> = (props) => {
           !(primaryColor || secondaryColor) && progressColor
         } ${glow && "glowingEffect"}`}
         style={{
-          width: progressAnimation ? `${score}%` : 0,
+          width: progressAnimation ? `${score}%` : '100%',
           background: `linear-gradient( to right, ${primaryColor}, ${secondaryColor})`,
         }}
       />
@@ -45,7 +45,8 @@ const ProgressBar: React.FC<IProgressBarProps> = (props) => {
         <div
           className={`particlesContainer`}
           style={{
-            left: progressAnimation ? `${score > 1 ? score : 1}%` : 1,
+            left: progressAnimation ? `${score > 1 ? score : 1}%` : '100%',
+            visibility: score > 4 ? 'visible' : 'hidden'
           }}
         >
           <div className={`particles`} />
@@ -101,8 +102,7 @@ const ProgressBar: React.FC<IProgressBarProps> = (props) => {
         <div
           className={`progressbarWidth`}
           style={{
-            width: progressWidth,
-            margin: "0px 10px",
+            width: progressWidth
           }}
         >
           <div className={`progressBar`}>
