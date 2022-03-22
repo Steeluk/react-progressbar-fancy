@@ -53,9 +53,9 @@ $anim-speed: 5; // in seconds
       width: 100%;
 
       background: linear-gradient(90deg, #f5f5f5, #c4c4c4);
-      border-radius: 10px 0px 10px 0px;
-      margin-top: 3px;
-      height: 8px;
+      border-radius: 10px 10px 10px 0px;
+      margin-top: 0px;
+      height: 25px;
     }
   }
 
@@ -73,12 +73,6 @@ $anim-speed: 5; // in seconds
     }
   }
 
-  .topTitlePlacement {
-    flex: 0 1 100%;
-    padding-left: 10px;
-    font-weight: 500;
-  }
-
   .barGaugeContainer {
     display: flex;
     align-items: center;
@@ -88,12 +82,69 @@ $anim-speed: 5; // in seconds
     }
   }
 
+  .or-spacer-vertical {
+    display:inline-block;
+    left: 25%;
+    margin-left: -2px;
+    width:20px; 
+    position:absolute; 
+    z-index: 11;
+    
+    
+    .mask { 
+      overflow:hidden; width:20px; height:25px; 
+      //outline:1px solid pink;
+    }
+    &.left .mask:after { 
+      content:''; 
+      display:block; margin-left:-20px;
+      width:20px; height:100%;  
+      border-radius:12px / 125px;  
+      box-shadow:0 0 8px black;
+    }
+    &.right .mask:before { 
+      content:''; 
+      display:block; margin-left:20px;
+      width:20px; height:100%; 
+      border-radius:12px / 125px; 
+      box-shadow:0 0 8px black;
+    }
+  }
+
+  .vl1 {
+    border-left: 6px solid #545454;
+    height: 100%;
+    position: absolute;
+    left: 25%;
+    margin-left: -3px;
+    top: 0;
+    z-index: 11;
+  }
+  .vl2 {
+    border-left: 6px solid #545454;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    margin-left: -3px;
+    top: 0;
+    z-index: 11;
+  }
+  .vl3 {
+    border-left: 6px solid #545454;
+    height: 100%;
+    position: absolute;
+    left: 75%;
+    margin-left: -3px;
+    top: 0;
+    z-index: 11;
+  }
+
   .progressFill {
     position: absolute;
     overflow: hidden;
-    height: 15px;
+    height: 25px;
     line-height: 20px;
-    border-radius: 10px 0px 10px 0px;
+    border-radius: 10px 10px 10px 0px;
     background: linear-gradient(
       to right,
       var(--primary-color),
@@ -109,29 +160,26 @@ $anim-speed: 5; // in seconds
       background: linear-gradient(
           120deg,
           transparent,
-          var(--secondary-color),
+          #F0CB35,
           transparent
       );
       animation: shine #{$anim-duration}s ease-in-out infinite;
-      height: 15px;
+      height: 25px;
       z-index: 1000;
     }
   }
 
-  .number {
-  }
-
   .glowingEffect {
-    filter: blur(3px);
+    filter: blur(6px);
   }
 
   .particlesContainer {
     position: absolute;
-    bottom: 50%;
+    bottom: 0%;
 
     .bigParticles {
-      height: 5px;
-      width: 5px;
+      height: 10px;
+      width: 10px;
       border-radius: 50%;
       background: var(--secondary-color);
       animation: animation3 4s ease-in-out infinite;
@@ -139,8 +187,8 @@ $anim-speed: 5; // in seconds
     }
 
     .particles {
-      height: 4px;
-      width: 4px;
+      height: 8px;
+      width: 8px;
       border-radius: 50%;
       background: var(--secondary-color);
       animation: animation1 2.5s ease-in-out infinite;
@@ -152,8 +200,8 @@ $anim-speed: 5; // in seconds
     }
 
     .smallParticles {
-      height: 2px;
-      width: 2px;
+      height: 4px;
+      width: 4px;
       border-radius: 50%;
       background: var(--secondary-color);
       animation: animation2 3s ease-in-out infinite;
@@ -325,12 +373,12 @@ $anim-speed: 5; // in seconds
 
 @keyframes shine {
   0% {
-    left: -100%;
+    left: 100%;
     transition-property: left;
   }
   #{($anim-speed / ($anim-duration + $anim-speed) * 100%)},
   100% {
-    left: 100%;
+    left: -100%;
     transition-property: left;
   }
 }
