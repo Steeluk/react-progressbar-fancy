@@ -140,7 +140,8 @@ $anim-speed: 5; // in seconds
   }
 
   .progressFill {
-    transition: all 1s ease-in-out;
+    transition: all 100ms linear;
+    transition-delay: 0s;
     width: '100%';
     position: absolute;
     overflow: hidden;
@@ -176,7 +177,7 @@ $anim-speed: 5; // in seconds
   }
 
   .particlesContainer {
-    transition: all 1s ease-in-out;
+    transition: all 100ms linear;
     position: absolute;
     bottom: 0%;
 
