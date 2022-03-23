@@ -16,8 +16,9 @@ export const Green = () => {
     // save intervalId to clear the interval when the
     // component re-renders
     const intervalId = setInterval(() => {
-      setProgress(progress - 0.2);
-    }, 100);
+      setProgress(progress - 1);
+    //   if(progress === 50) setProgress(75);
+    }, 1000);
 
     // clear interval on re-render to avoid memory leaks
     return () => clearInterval(intervalId);

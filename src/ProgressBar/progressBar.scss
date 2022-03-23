@@ -140,14 +140,14 @@ $anim-speed: 5; // in seconds
   }
 
   .progressFill {
-    transition: all 100ms linear;
+    transition: all 1s linear;
     transition-delay: 0s;
     width: '100%';
     position: absolute;
     overflow: hidden;
     height: 20px;
     line-height: 20px;
-    border-radius: 10px 0px 0px 0px;
+    border-radius: 10px 0px 10px 0px;
     background: linear-gradient(
       to right,
       var(--primary-color),
@@ -177,7 +177,7 @@ $anim-speed: 5; // in seconds
   }
 
   .particlesContainer {
-    transition: all 100ms linear;
+    transition: all 1s linear;
     position: absolute;
     bottom: 0%;
 
