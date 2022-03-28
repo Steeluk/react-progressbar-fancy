@@ -18,7 +18,7 @@ const ProgressBar: React.FC<IProgressBarProps> = (props) => {
     hideText,
     darkTheme,
     disableGlow,
-    barShape = "initial"
+    barShape = "middle"
   } = props;
 
   useEffect(() => {

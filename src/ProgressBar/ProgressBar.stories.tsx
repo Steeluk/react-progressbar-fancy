@@ -24,5 +24,5 @@ export const Green = () => {
     // add timeLeft as a dependency to re-rerun the effect
     // when we update it
   }, [progress]);
-  return <ProgressBar score={(progress * 100) / 20} status="green" barShape ="middle"/>;
+  return <ProgressBar score={(progress * 100) / 20} status="green" barShape ="beginning"/>;
 };

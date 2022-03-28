@@ -36,7 +36,7 @@ styleInject(css_248z);
 
 var ProgressBar = function (props) {
     var _a = React.useState(false), progressAnimation = _a[0], setProgressAnimation = _a[1];
-    var score = props.score, progressWidth = props.progressWidth, className = props.className, primaryColor = props.primaryColor, secondaryColor = props.secondaryColor, status = props.status, label = props.label, hideText = props.hideText, darkTheme = props.darkTheme, disableGlow = props.disableGlow, _b = props.barShape, barShape = _b === void 0 ? "initial" : _b;
+    var score = props.score, progressWidth = props.progressWidth, className = props.className, primaryColor = props.primaryColor, secondaryColor = props.secondaryColor, status = props.status, label = props.label, hideText = props.hideText, darkTheme = props.darkTheme, disableGlow = props.disableGlow, _b = props.barShape, barShape = _b === void 0 ? "middle" : _b;
     React.useEffect(function () {
         setProgressAnimation(true);
     });
