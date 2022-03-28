@@ -35,12 +35,14 @@ const ProgressBar: React.FC<IProgressBarProps> = (props) => {
           background: `linear-gradient( to right, ${primaryColor}, ${secondaryColor})`,
         }}
       />
-      {/* <div className="or-spacer-vertical left">
-        <div className="mask"></div>
-      </div> */}
-      <div className="vl1"></div>
-      <div className="vl2"></div>
-      <div className="vl3"></div>
+      {/* <div className="lock"  style={{left: '12.5%'}}>🔒</div> */}
+      {/* <div className="lock"  style={{left: '37.5%'}}>🔒</div>
+      <div className="lock"  style={{left: '62.5%'}}>🔒</div>
+      <div className="lock"  style={{left: '87.5%'}}>🔒</div> */}
+     {/*  Vertical Dividers
+      <div className="vl"  style={{left: '25%'}}></div>
+      <div className="vl"  style={{left: '50%'}}></div>
+      <div className="vl"  style={{left: '75%'}}></div> */}
       <div className={`${!(primaryColor || secondaryColor) && progressColor}`}>
         <div
           className={`particlesContainer`}

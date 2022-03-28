@@ -8,7 +8,7 @@ export default {
 
 export const Blue = () => <ProgressBar score={25} progressColor={"blue"} />;
 export const Green = () => {
-  const [progress, setProgress] = React.useState(100);
+  const [progress, setProgress] = React.useState(20);
   useEffect(() => {
     // exit early when we reach 0
     if (!progress) return;
@@ -25,7 +25,7 @@ export const Green = () => {
     // add timeLeft as a dependency to re-rerun the effect
     // when we update it
   }, [progress]);
-  return <ProgressBar score={progress} progressColor={"green"} />;
+  return <ProgressBar score={(progress * 100) / 20} progressColor={"green"} />;
 };
 export const Purple = () => <ProgressBar score={75} progressColor={"purple"} />;
 export const Red = () => <ProgressBar score={100} progressColor={"red"} />;

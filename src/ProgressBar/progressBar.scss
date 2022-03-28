@@ -82,58 +82,19 @@ $anim-speed: 5; // in seconds
     }
   }
 
-  .or-spacer-vertical {
-    display:inline-block;
+  .lock {
+    height: 100%;
+    position: absolute;
     left: 25%;
-    margin-left: -2px;
-    width:20px; 
-    position:absolute; 
+    margin-left: -3px;
+    top: -5px;
     z-index: 11;
-    
-    
-    .mask { 
-      overflow:hidden; width:20px; height:25px; 
-      //outline:1px solid pink;
-    }
-    &.left .mask:after { 
-      content:''; 
-      display:block; margin-left:-20px;
-      width:20px; height:100%;  
-      border-radius:12px / 125px;  
-      box-shadow:0 0 8px black;
-    }
-    &.right .mask:before { 
-      content:''; 
-      display:block; margin-left:20px;
-      width:20px; height:100%; 
-      border-radius:12px / 125px; 
-      box-shadow:0 0 8px black;
-    }
   }
 
-  .vl1 {
+  .vl {
     border-left: 6px solid #545454;
     height: 100%;
     position: absolute;
-    left: 25%;
-    margin-left: -3px;
-    top: 0;
-    z-index: 11;
-  }
-  .vl2 {
-    border-left: 6px solid #545454;
-    height: 100%;
-    position: absolute;
-    left: 50%;
-    margin-left: -3px;
-    top: 0;
-    z-index: 11;
-  }
-  .vl3 {
-    border-left: 6px solid #545454;
-    height: 100%;
-    position: absolute;
-    left: 75%;
     margin-left: -3px;
     top: 0;
     z-index: 11;
