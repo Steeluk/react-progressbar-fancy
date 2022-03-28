@@ -4,7 +4,8 @@ export interface IProgressBarProps {
     progressWidth?: number;
     hideText?: boolean;
     darkTheme?: boolean;
-    progressColor?: "red" | "green" | "blue" | "purple";
+    status: string; 
+    barShape?: string; 
     primaryColor?: string;
     secondaryColor?: string;
     disableGlow?: boolean;

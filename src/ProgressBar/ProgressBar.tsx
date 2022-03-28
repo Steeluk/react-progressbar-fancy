@@ -13,11 +13,12 @@ const ProgressBar: React.FC<IProgressBarProps> = (props) => {
     className,
     primaryColor,
     secondaryColor,
-    progressColor = primaryColor || secondaryColor ? "" : "red",
+    status,
     label,
     hideText,
     darkTheme,
     disableGlow,
+    barShape = "initial"
   } = props;
 
   useEffect(() => {
@@ -27,13 +28,10 @@ const ProgressBar: React.FC<IProgressBarProps> = (props) => {
   const renderProgressFiller = (glow: boolean) => (
     <>
       <div
-        className={`progressFill ${
-          !(primaryColor || secondaryColor) && progressColor
-        } ${glow && "glowingEffect"}`}
+        className={`progressFill 
+        } ${glow && "glowingEffect"} ${status}`}
         style={{
-          width: progressAnimation ? `${score}%` : '100%',
-          background: `linear-gradient( to right, ${primaryColor}, ${secondaryColor})`,
-        }}
+          width: progressAnimation ? `${score}%` : '100%',        }}
       />
       {/* <div className="lock"  style={{left: '12.5%'}}>🔒</div> */}
       {/* <div className="lock"  style={{left: '37.5%'}}>🔒</div>
@@ -43,7 +41,7 @@ const ProgressBar: React.FC<IProgressBarProps> = (props) => {
       <div className="vl"  style={{left: '25%'}}></div>
       <div className="vl"  style={{left: '50%'}}></div>
       <div className="vl"  style={{left: '75%'}}></div> */}
-      <div className={`${!(primaryColor || secondaryColor) && progressColor}`}>
+      <div>
         <div
           className={`particlesContainer`}
           style={{
@@ -91,7 +89,7 @@ const ProgressBar: React.FC<IProgressBarProps> = (props) => {
 
   return (
     <div
-      className={`progressBarFancyContainer ${className}`}
+      className={`progressBarFancyContainer ${className} ${barShape}`}
       style={{ width: progressWidth }}
     >
       {!hideText && (

@@ -3,23 +3,27 @@ $anim-duration: 3; // in seconds
 $anim-speed: 5; // in seconds
 
 .green {
-  --primary-color: #f12711;
-  --secondary-color: #00f260;
+  --progressColor: #00f260;
 }
 
 .red {
-  --primary-color: #f12711;
-  --secondary-color: #f5af19;
+  --progressColor: #f12711
 }
 
-.blue {
-  --primary-color: #0ED2F7;
-  --secondary-color: #B2FEFA;
+.middle {
+  --barShape: 10px 10px 10px 10px;
 }
 
-.purple {
-  --primary-color: #7303c0;
-  --secondary-color: #ec38bc;
+.beginning {
+  --barShape: 10px 10px 10px 0px;
+}
+
+.end {
+  --barShape: 10px 10px 0px 10px;
+}
+
+.active{
+  --progressColor: linear-gradient( to right, #f12711, #F0CB35, #00f260)
 }
 
 .progressBarFancyContainer {
@@ -53,7 +57,7 @@ $anim-speed: 5; // in seconds
       width: 100%;
 
       background: linear-gradient(90deg, #f5f5f5, #c4c4c4);
-      border-radius: 10px 0px 10px 0px;
+      border-radius: var(--barShape);
       margin-top: 0px;
       height: 20px;
     }
@@ -108,13 +112,8 @@ $anim-speed: 5; // in seconds
     overflow: hidden;
     height: 20px;
     line-height: 20px;
-    border-radius: 10px 0px 10px 0px;
-    background: linear-gradient(
-      to right,
-      var(--primary-color),
-      #F0CB35,
-      var(--secondary-color)
-    );
+    border-radius: var(--barShape);
+    background: var(--progressColor);
     z-index: 10;
 
     &::before {
